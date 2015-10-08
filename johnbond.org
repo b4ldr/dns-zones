@@ -1,0 +1,83 @@
+$TTL 1h ; Set TTL to one hour for all important RRsets
+
+@	SOA	ns.johnbond.org. dns.johnbond.org. (
+		2015072401 ; Serial
+		1h ; Refresh
+		10m ; Retry
+		10d; Expire
+		1h ; Negative
+)
+	NS	ns.johnbond.org.
+	NS	ns1.he.net.
+
+	MX	10 ns.johnbond.org.
+        TXT     keybase-site-verification=h5HhRW3FpEfaZ8b8cHNtyFHpyZ25G7VqmnHx8pz2sqE
+ns	A	185.34.0.149
+	AAAA	2a00:d1e0:1000:a00::53 
+
+$TTL 6h ; Set TTL for other RRsets to 6 hours
+
+@	A	185.34.0.149
+	AAAA	2a00:d1e0:1000:a00::53 
+_xmpp-server._tcp SRV 0 5 5269 odin
+_xmpp-client._tcp SRV 0 5 5222 odin
+_jabber._tcp SRV 0 5 5269 odin
+chat	A	5.28.62.36
+		AAAA	2001:41c9:1:41c::36
+_xmpp-server._tcp.chat SRV 0 5 5269 odin
+odin	A	5.28.62.36
+	AAAA	2001:41c9:1:41c::36
+git	A	5.28.62.36
+www	A	185.34.0.149
+	AAAA	2a00:d1e0:1000:a00::53 
+isohunt	A       185.34.0.149
+        AAAA    2a00:d1e0:1000:a00::53
+eztv	A       185.34.0.149
+        AAAA    2a00:d1e0:1000:a00::53
+tpb	A       185.34.0.149
+        AAAA    2a00:d1e0:1000:a00::53
+ssl	A       185.34.0.149
+        AAAA    2a00:d1e0:1000:a00::53
+tw	A       185.34.0.149
+        AAAA    2a00:d1e0:1000:a00::53
+ssh	A       185.34.0.149
+        AAAA    2a00:d1e0:1000:a00::53
+        TXT     "msg=maintance"
+        TXT     "start=20140707-10:00"
+        TXT     "end=20140709-10:00"
+fail-start TXT  "start=on hour ago"
+        A       185.34.0.149
+        AAAA    2a00:d1e0:1000:a00::53
+fail-end   TXT  "end=when in a few hours"
+        A       185.34.0.149
+        AAAA    2a00:d1e0:1000:a00::53
+fail-reason TXT "msg=no idea"
+        A       185.34.0.149
+        AAAA    2a00:d1e0:1000:a00::53
+parked-end  TXT     "reason=1"
+        TXT     "msg=test"
+        TXT     "end=20140709-10:00"
+        A       185.34.0.149
+        AAAA    2a00:d1e0:1000:a00::53
+parked  TXT     "reason=1"
+        TXT     "msg=test"
+        A       185.34.0.149
+        AAAA    2a00:d1e0:1000:a00::53
+imaps	A       185.34.0.149
+        AAAA    2a00:d1e0:1000:a00::53
+icinga	A       185.34.0.149
+        AAAA    2a00:d1e0:1000:a00::53
+_pmm._udp	SRV	0    5      9999   pmm
+_pmm._udp.pmm	SRV	0    5      9999   pmm
+_pmm._udp.pmm2	SRV	0    5      9999   pmm
+pmm2	A       185.34.0.149
+        AAAA    2a00:d1e0:1000:a00::53
+pmm	A	192.168.1.6
+pmm	A	192.168.1.7
+pmm	A	192.168.1.8
+_pm._tcp.master  SRV 0 0 11 ww1.google.com.    
+_pm._tcp.master  SRV 0 0 11 ww2.google.com.    
+_pm._tcp.master  SRV 0 0 11 ww3.google.com.    
+git.lab A 192.168.0.252
+ci.lab A 192.168.0.252
+master.lab A 192.168.0.251
